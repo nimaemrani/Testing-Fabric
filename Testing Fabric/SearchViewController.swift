@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet var searchBar: UISearchBar!
     
     
 }
