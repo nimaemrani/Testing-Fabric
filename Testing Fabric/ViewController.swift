@@ -9,11 +9,11 @@
 import UIKit
 import TwitterKit
 
-class ViewController: TWTRTimelineViewController {
+class SearchTimelineViewController: TWTRTimelineViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let client = TWTRAPIClient()
-        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#NewHampshire", APIClient: client)
+        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#cats", APIClient: client)
     }
 }
