@@ -18,6 +18,7 @@
 		3C1A2CBB1C69723F009225A6 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A2CB71C69723F009225A6 /* TwitterKit.framework */; };
 		3C1A2CBC1C69723F009225A6 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A2CB81C69723F009225A6 /* TwitterKitResources.bundle */; };
 		3C1A2CBD1C69723F009225A6 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A2CB91C69723F009225A6 /* TwitterCore.framework */; };
+		3C1A2CBF1C697AC8009225A6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A2CBE1C697AC8009225A6 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3C1A2CB71C69723F009225A6 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		3C1A2CB81C69723F009225A6 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		3C1A2CB91C69723F009225A6 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		3C1A2CBE1C697AC8009225A6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				3C1A2C871C6971E1009225A6 /* AppDelegate.swift */,
 				3C1A2C891C6971E1009225A6 /* ViewController.swift */,
 				3C1A2C8B1C6971E1009225A6 /* Main.storyboard */,
+				3C1A2CBE1C697AC8009225A6 /* SearchViewController.swift */,
 				3C1A2C8E1C6971E1009225A6 /* Assets.xcassets */,
 				3C1A2C901C6971E1009225A6 /* LaunchScreen.storyboard */,
 				3C1A2C931C6971E1009225A6 /* Info.plist */,
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1A2CBF1C697AC8009225A6 /* SearchViewController.swift in Sources */,
 				3C1A2C8A1C6971E1009225A6 /* ViewController.swift in Sources */,
 				3C1A2C881C6971E1009225A6 /* AppDelegate.swift in Sources */,
 			);
