@@ -18,7 +18,7 @@ class SearchTimelineViewController: TWTRTimelineViewController {
         super.viewDidLoad()
         
         let client = TWTRAPIClient()
-        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "\(text)", APIClient: client)
+        self.dataSource = TWTRCollectionTimelineDataSource(collectionID: "393773266801659904", APIClient: client)
     } 
 
 }

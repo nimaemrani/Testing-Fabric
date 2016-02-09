@@ -53,7 +53,7 @@
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-RC-xxW">
                                 <rect key="frame" x="133" y="128" width="55" height="31"/>
-                                <state key="normal" title="Enter"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="button:" destination="iyF-Cu-blf" eventType="touchUpInside" id="wnf-VZ-YAd"/>
                                     <segue destination="8Xj-HG-IrL" kind="presentation" identifier="DetailSegue" id="RQu-Sp-4ve"/>
