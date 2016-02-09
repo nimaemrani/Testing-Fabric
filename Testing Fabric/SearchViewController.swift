@@ -12,5 +12,23 @@ class SearchViewController: UIViewController {
     
     @IBOutlet var searchBar: UISearchBar!
     
+    var searchText = String?()
+    var screenCounter : Int = 0
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+    @IBAction func button(sender: AnyObject) {
+        
+        var searchText = String?()
+        searchText = self.searchBar.text!
+        screenCounter++
+
+    }
 }
+
+    
+    
+

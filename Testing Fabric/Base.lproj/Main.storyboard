@@ -52,10 +52,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-RC-xxW">
-                                <rect key="frame" x="133" y="138" width="55" height="31"/>
-                                <state key="normal" title="Search"/>
+                                <rect key="frame" x="133" y="128" width="55" height="31"/>
+                                <state key="normal" title="Enter"/>
                                 <connections>
-                                    <segue destination="8Xj-HG-IrL" kind="push" id="5Gs-56-lpY"/>
+                                    <action selector="button:" destination="iyF-Cu-blf" eventType="touchUpInside" id="wnf-VZ-YAd"/>
+                                    <segue destination="8Xj-HG-IrL" kind="push" id="RQu-Sp-4ve"/>
                                 </connections>
                             </button>
                         </subviews>
