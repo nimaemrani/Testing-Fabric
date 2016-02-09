@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -22,11 +23,16 @@ class SearchViewController: UIViewController {
     
     @IBAction func button(sender: AnyObject) {
         
-        var searchText = String?()
-        searchText = self.searchBar.text!
-        screenCounter++
+        self.performSegueWithIdentifier("DetailSegue", sender: self)
 
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let destinationVC = segue.destinationViewController as! SearchTimelineViewController
+        
+        destinationVC.text = self.searchBar.text
+    }
+    
 }
 
     

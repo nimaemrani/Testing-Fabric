@@ -11,22 +11,14 @@ import TwitterKit
 
 
 class SearchTimelineViewController: TWTRTimelineViewController {
+    
+    var text = String?()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let text: String? = otherViewController.searchText
-        
-
-        let otherViewController: SearchViewController = SearchViewController(nibName: nil, bundle: nil)
-        let counter: Int = otherViewController.screenCounter
-
-        let text: String? = otherViewController.searchText
-       // print(text)
         let client = TWTRAPIClient()
-        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "\(text!)", APIClient: client)
-        
+        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "\(text)", APIClient: client)
+    } 
 
-        
-    }
 }
