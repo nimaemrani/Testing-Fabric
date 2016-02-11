@@ -18,9 +18,14 @@ class SearchTimelineViewController: UIViewController {
     var initialFloatValue: CGFloat = 160.0
     var initialFloatValueY: CGFloat = 135.5
     
+    @IBOutlet var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, 2000)
+        scrollView.alwaysBounceHorizontal = false
+
         
         if numberOfTweets == 0 {
             displayTweet("631879971628183552", xValue: initialFloatValue, yValue: initialFloatValueY)
@@ -31,6 +36,7 @@ class SearchTimelineViewController: UIViewController {
 
     }
     
+    
     func displayTweet (tweetID: String, xValue: CGFloat, yValue: CGFloat) {
 
         if numberOfTweets == 0 {
@@ -39,7 +45,8 @@ class SearchTimelineViewController: UIViewController {
             if let unwrappedTweet = tweet {
                 let tweetView = TWTRTweetView(tweet: unwrappedTweet)
                 tweetView.center = CGPointMake(xValue, yValue)
-                self.view.addSubview(tweetView)
+                //self.scrollView.addSubview(tweetView)
+                self.scrollView.addSubview(tweetView)
 
                 
             } else {
@@ -53,7 +60,8 @@ class SearchTimelineViewController: UIViewController {
                 if let unwrappedTweet = tweet {
                     let tweetView = TWTRTweetView(tweet: unwrappedTweet)
                     tweetView.center = CGPointMake(xValue, yValue)
-                    self.view.addSubview(tweetView)
+                    self.scrollView.addSubview(tweetView)
+
                 } else {
                     NSLog("Tweet load error: %@", error!.localizedDescription);
                 }
