@@ -15,50 +15,52 @@ class SearchTimelineViewController: UIViewController {
     var text = String?()
     var numberOfTweets = 0
     
+    var initialFloatValue: CGFloat = 160.0
+    var initialFloatValueY: CGFloat = 135.5
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if numberOfTweets == 0 {
-            displayTweet("631879971628183552")
+            displayTweet("631879971628183552", xValue: initialFloatValue, yValue: initialFloatValueY)
             numberOfTweets++
         }
-        else {
-            displayTweet("23423423")
-        }
-        
+        displayTweet("631879971628183552", xValue: initialFloatValue, yValue: initialFloatValueY)
+        displayTweet("631879971628183552", xValue: initialFloatValue, yValue: initialFloatValueY)
+
     }
     
-    func displayTweet (tweetID: String) {
-        
-        var xValue: CGFloat = 0
-        var yValue: CGFloat = 0
-        
+    func displayTweet (tweetID: String, xValue: CGFloat, yValue: CGFloat) {
+
         if numberOfTweets == 0 {
             
             TWTRAPIClient().loadTweetWithID(tweetID) { (tweet, error) in
             if let unwrappedTweet = tweet {
                 let tweetView = TWTRTweetView(tweet: unwrappedTweet)
-                let xValueFirstTweet = self.view.center.x
-                let yValueFirstTweet = (self.topLayoutGuide.length + tweetView.frame.size.height / 2) + 25
-                xValue = xValueFirstTweet
-                yValue = yValueFirstTweet
-                tweetView.center = CGPointMake(xValueFirstTweet, yValueFirstTweet)
+                tweetView.center = CGPointMake(xValue, yValue)
                 self.view.addSubview(tweetView)
+
+                
             } else {
                 NSLog("Tweet load error: %@", error!.localizedDescription);
             }
         }
+            self.initialFloatValueY = self.initialFloatValueY + 235
     }
         else {
             TWTRAPIClient().loadTweetWithID(tweetID) { (tweet, error) in
                 if let unwrappedTweet = tweet {
                     let tweetView = TWTRTweetView(tweet: unwrappedTweet)
-                    tweetView.center = CGPointMake(xValue, yValue + 75)
+                    tweetView.center = CGPointMake(xValue, yValue)
                     self.view.addSubview(tweetView)
                 } else {
                     NSLog("Tweet load error: %@", error!.localizedDescription);
                 }
+
             }
+            self.initialFloatValueY = self.initialFloatValueY + 235
+
         }
        
         
