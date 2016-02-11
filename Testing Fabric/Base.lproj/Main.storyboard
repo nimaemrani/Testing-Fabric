@@ -5,36 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Search Timeline View Controller-->
-        <scene sceneID="l0g-8I-qEy">
-            <objects>
-                <tableViewController id="8Xj-HG-IrL" customClass="SearchTimelineViewController" customModule="Testing_Fabric" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="W4M-I8-oT9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5Jk-9w-sy8">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Jk-9w-sy8" id="UfT-co-Pca">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8Xj-HG-IrL" id="xrd-vk-0Bz"/>
-                            <outlet property="delegate" destination="8Xj-HG-IrL" id="4GY-ab-pK5"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="A9b-AY-CNG"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OLr-YI-uPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="215" y="177"/>
-        </scene>
         <!--Search View Controller-->
         <scene sceneID="CRe-Ww-yQS">
             <objects>
@@ -56,7 +26,7 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="button:" destination="iyF-Cu-blf" eventType="touchUpInside" id="wnf-VZ-YAd"/>
-                                    <segue destination="8Xj-HG-IrL" kind="presentation" identifier="DetailSegue" id="RQu-Sp-4ve"/>
+                                    <segue destination="XXz-0B-H7s" kind="presentation" identifier="DetailSegue" id="Pg6-7C-2L2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,6 +41,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hie-DX-o6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-158" y="177"/>
+        </scene>
+        <!--Search Timeline View Controller-->
+        <scene sceneID="p3g-tl-4z0">
+            <objects>
+                <viewController id="XXz-0B-H7s" customClass="SearchTimelineViewController" customModule="Testing_Fabric" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ivy-Pp-yeB"/>
+                        <viewControllerLayoutGuide type="bottom" id="NWi-Df-UlZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iT0-Vj-fSc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIZ-V5-uwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LQ8-4O-bbE">
